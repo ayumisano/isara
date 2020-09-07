@@ -969,6 +969,8 @@ body section.question div.question_inner ul.question_list li.question_item a.que
   font-weight: bold;
   color: #000;
   position: relative;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 
 body section.question div.question_inner ul.question_list li.question_item a.question_ttl::before {
@@ -977,6 +979,7 @@ body section.question div.question_inner ul.question_list li.question_item a.que
   font-weight: 900;
   color: #016ea9;
   display: inline-block;
+  margin-right: 5px;
 }
 
 body section.question div.question_inner ul.question_list li.question_item a.question_ttl::after {
@@ -990,6 +993,11 @@ body section.question div.question_inner ul.question_list li.question_item a.que
   border-right: solid 3px #e5e5e5;
   -webkit-transform: rotate(135deg);
           transform: rotate(135deg);
+}
+
+body section.question div.question_inner ul.question_list li.question_item a.question_ttl.active::after {
+  -webkit-transform: rotate(315deg);
+          transform: rotate(315deg);
 }
 
 body section.question div.question_inner ul.question_list li.question_item p.question_txt {
@@ -1327,13 +1335,14 @@ body .scroll-top:hover {
     display: none;
   }
   body section.lessonFlow div.lessonFlow_inner.inner ul.lessonFlow_list li.lessonFLow_item {
-    position: relative;
     font-size: 12px;
     font-weight: 600;
     padding: 10px 15px;
     margin-bottom: 5px;
+    display: block;
   }
   body section.lessonFlow div.lessonFlow_inner.inner ul.lessonFlow_list li.lessonFLow_item a.lessonFlow_link {
+    position: relative;
     font-size: 12px;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1345,6 +1354,8 @@ body .scroll-top:hover {
         -ms-flex-pack: initial;
             justify-content: initial;
     width: 100%;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
   }
   body section.lessonFlow div.lessonFlow_inner.inner ul.lessonFlow_list li.lessonFLow_item a.lessonFlow_link img {
     margin-bottom: 0;
@@ -1354,21 +1365,35 @@ body .scroll-top:hover {
     height: 35px;
     display: inline-block;
   }
-  body section.lessonFlow div.lessonFlow_inner.inner ul.lessonFlow_list li.lessonFLow_item ul.lessonFlow_child_list {
-    display: none;
-  }
-  body section.lessonFlow div.lessonFlow_inner.inner ul.lessonFlow_list li.lessonFLow_item ::after {
+  body section.lessonFlow div.lessonFlow_inner.inner ul.lessonFlow_list li.lessonFLow_item a.lessonFlow_link::after {
     content: '';
     position: absolute;
-    bottom: 20px;
+    top: 10px;
     right: 15px;
     width: 10px;
     height: 10px;
     border: 0px;
+    display: block;
     border-top: solid 3px #666;
     border-right: solid 3px #666;
     -webkit-transform: rotate(135deg);
             transform: rotate(135deg);
+  }
+  body section.lessonFlow div.lessonFlow_inner.inner ul.lessonFlow_list li.lessonFLow_item a.lessonFlow_link.active::after {
+    -webkit-transform: rotate(315deg);
+            transform: rotate(315deg);
+  }
+  body section.lessonFlow div.lessonFlow_inner.inner ul.lessonFlow_list li.lessonFLow_item ul.lessonFlow_child_list {
+    display: none;
+    width: 100%;
+  }
+  body section.lessonFlow div.lessonFlow_inner.inner ul.lessonFlow_list li.lessonFLow_item ul.lessonFlow_child_list li.lessonFlow_child_menu p.lessonFlow_child_txt {
+    margin-top: 10px;
+    font-size: 12px;
+    margin-bottom: 15px;
+  }
+  body section.lessonFlow div.lessonFlow_inner.inner ul.lessonFlow_list li.lessonFLow_item ul.lessonFlow_child_list.active {
+    display: block;
   }
   body section.lessonFlow div.lessonFlow_inner.inner ul.lessonFlow_list img {
     display: none;
